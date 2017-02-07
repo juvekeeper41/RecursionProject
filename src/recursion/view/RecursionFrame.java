@@ -7,13 +7,23 @@ import recursion.view.RecursionPanel;
 
 public class RecursionFrame extends JFrame 
 {
-	private recursionPanel appPanel;
+	private RecursionPanel basePanel;
 	private RecursionController baseController;
 	
-	public recursionFrame(recursionController baseController)
+	public RecursionFrame(RecursionController baseController)
 	{
 		super();
 		this.baseController = baseController;
-		this.appPanel = new recursionPanel(baseController);
+		this.basePanel = new RecursionPanel(baseController);
+		
+		setupFrame();
+	}
+	
+	private void setupFrame()
+	{
+		this.setContentPane(basePanel);
+		this.setTitle("Let's do math)");
+		this.setSize(new Dimension(500, 500));
+		this.setVisible(true);
 	}
 }
