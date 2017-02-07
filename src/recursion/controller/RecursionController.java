@@ -52,7 +52,7 @@ public class RecursionController
 		JOptionPane.showMessageDialog(baseFrame, "Wow!");
 	}
 	
-	private boolean isValid (String current)
+	private boolean isValid (boolean current)
 	{
 		try
 		{
